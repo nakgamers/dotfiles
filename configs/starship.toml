@@ -1,0 +1,25 @@
+format = "[\\[Quineilla\\]](bold #ff79c6) $directory$git_branch$git_status$python$nodejs$character"
+
+[character]
+success_symbol = "[❯](bold #50fa7b)"
+error_symbol = "[✗](bold #ff5555)"
+
+[directory]
+style = "bold #8be9fd"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "bold #bd93f9"
+symbol = "🌿 "
+
+[git_status]
+style = "bold #f1fa8c"
+
+[python]
+style = "bold #50fa7b"
+symbol = "🐍 "
+
+[nodejs]
+style = "bold #50fa7b"
+symbol = "⬢ "

@@ -1,0 +1,62 @@
+[app-folders]
+folder-children=['Utilities', 'YaST', 'Pardus']
+
+[app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/server/.local/share/backgrounds/2026-10-19-14-22-24-media-generation-koc-shot17-keyframe-v1-0-fe749395-3f49-4edc-a115-25780330d227.webp'
+picture-uri-dark='file:///home/server/.local/share/backgrounds/2026-10-19-14-22-24-media-generation-koc-shot17-keyframe-v1-0-fe749395-3f49-4edc-a115-25780330d227.webp'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[input-sources]
+sources=[('xkb', 'us')]
+xkb-options=@as []
+
+[interface]
+gtk-theme='Colloid-Grey-Dark-Dracula'
+icon-theme='Papirus-Dark'
+
+[notifications]
+application-children=['apport-gtk', 'org-gnome-nautilus', 'firefox-firefox', 'virt-manager', 'snapd-desktop-integration-snapd-desktop-integration']
+
+[notifications/application/apport-gtk]
+application-id='apport-gtk.desktop'
+
+[notifications/application/firefox-firefox]
+application-id='firefox_firefox.desktop'
+
+[notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[notifications/application/snapd-desktop-integration-snapd-desktop-integration]
+application-id='snapd-desktop-integration_snapd-desktop-integration.desktop'
+
+[notifications/application/virt-manager]
+application-id='virt-manager.desktop'
+
+[screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/server/.local/share/backgrounds/2026-10-19-14-22-24-media-generation-koc-shot17-keyframe-v1-0-fe749395-3f49-4edc-a115-25780330d227.webp'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[session]
+idle-delay=uint32 0
