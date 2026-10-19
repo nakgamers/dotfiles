@@ -24,4 +24,10 @@ dconf load /org/gnome/desktop/ < $D/gnome/gnome-desktop.dconf
 dconf load /org/gnome/shell/ < $D/gnome/gnome-shell.dconf
 echo "=== 7/7 Bashrc ==="
 grep -q "splash.sh" ~/.bashrc || cat $D/configs/bashrc-additions.txt >> ~/.bashrc
+echo "=== 8/8 Keybinding Ctrl+Alt+T ==="
+gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "[]"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Kitty'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'kitty'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Primary><Alt>t'
 echo "Selesai! Restart untuk efek penuh."
