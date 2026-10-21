@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=Conky Sysinfo
-Exec=conky -c /home/server/.config/conky/sysinfo.conf
+Exec=sh -c "conky -c $HOME/.config/conky/sysinfo.conf"
 X-GNOME-Autostart-enabled=true

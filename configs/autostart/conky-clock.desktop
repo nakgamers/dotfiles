@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=Conky Clock
-Exec=conky -c /home/server/.config/conky/clock.conf
+Exec=sh -c "conky -c $HOME/.config/conky/clock.conf"
 X-GNOME-Autostart-enabled=true

@@ -2,7 +2,7 @@
 set -e
 D="$(cd "$(dirname "$0")" && pwd)"
 echo "=== 1/7 Packages ==="
-sudo apt update && sudo apt install -y kitty conky-all fonts-jetbrains-mono ffmpeg chafa gnome-shell-extension-manager gnome-tweaks papirus-icon-theme curl wget git
+sudo apt update && sudo apt install -y kitty conky-all htop fonts-jetbrains-mono ffmpeg chafa gnome-shell-extension-manager gnome-tweaks papirus-icon-theme curl wget git
 echo "=== 2/7 Fastfetch ==="
 cd /tmp && wget -q https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb && sudo apt install -y ./fastfetch-linux-amd64.deb
 echo "=== 3/7 Starship ==="
@@ -17,11 +17,12 @@ cp -r $D/configs/fastfetch ~/.config/ && cp -r $D/configs/conky ~/.config/
 cp -r $D/configs/autostart ~/.config/ && chmod +x ~/.config/fastfetch/splash.sh
 cp -r $D/configs/gnome-extensions/* ~/.local/share/gnome-shell/extensions/ 2>/dev/null || true
 echo "=== 6/7 Wallpaper + GNOME ==="
+dconf load /org/gnome/desktop/ < $D/gnome/gnome-desktop.dconf
+dconf load /org/gnome/shell/ < $D/gnome/gnome-shell.dconf
 cp $D/configs/wallpaper.webp ~/.local/share/backgrounds/
 gsettings set org.gnome.desktop.background picture-uri "file://$HOME/.local/share/backgrounds/wallpaper.webp"
 gsettings set org.gnome.desktop.background picture-uri-dark "file://$HOME/.local/share/backgrounds/wallpaper.webp"
-dconf load /org/gnome/desktop/ < $D/gnome/gnome-desktop.dconf
-dconf load /org/gnome/shell/ < $D/gnome/gnome-shell.dconf
+gsettings set org.gnome.desktop.screensaver picture-uri "file://$HOME/.local/share/backgrounds/wallpaper.webp"
 echo "=== 7/7 Bashrc ==="
 grep -q "splash.sh" ~/.bashrc || cat $D/configs/bashrc-additions.txt >> ~/.bashrc
 echo "=== 8/8 Keybinding Ctrl+Alt+T ==="

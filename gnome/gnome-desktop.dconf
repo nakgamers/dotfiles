@@ -20,8 +20,6 @@ translate=true
 [background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/server/.local/share/backgrounds/2026-10-19-14-22-24-media-generation-koc-shot17-keyframe-v1-0-fe749395-3f49-4edc-a115-25780330d227.webp'
-picture-uri-dark='file:///home/server/.local/share/backgrounds/2026-10-19-14-22-24-media-generation-koc-shot17-keyframe-v1-0-fe749395-3f49-4edc-a115-25780330d227.webp'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -54,7 +52,6 @@ application-id='virt-manager.desktop'
 [screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/server/.local/share/backgrounds/2026-10-19-14-22-24-media-generation-koc-shot17-keyframe-v1-0-fe749395-3f49-4edc-a115-25780330d227.webp'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
